@@ -16,6 +16,7 @@
   width: 100%;
   background: url("/public/fotoBanner.png") no-repeat center center/cover;
   position: relative;
+  box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
 }
 h2{
   /*Posição*/
