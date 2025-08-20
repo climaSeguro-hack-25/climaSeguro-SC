@@ -9,7 +9,7 @@
       <div class="membro">
         <!-- ROBERTA RIBEIRO -->
         <p>
-          <img src="/public/robertaRibeiro.png" alt="roberta">
+          <img src="/public/provisorio.png" alt="roberta">
         </p>
         <div class="seperar">
           <h3>Roberta Ribeiro</h3>
@@ -47,7 +47,7 @@
       <div class="membro">
         <!-- YASMIN KAUANY DE OLIVEIRA -->
         <p>
-          <img src="/public/robertaRibeiro.png" alt="sara">
+          <img src="/public/provisorio.png" alt="sara">
         </p>
         <div class="seperar">
           <h3>Yasmin Kauany de Oliveira</h3>
