@@ -14,6 +14,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.1.1",
+    "@mdi/font": "^7.4.47",
     "vue": "^3.5.18"
   },
   "devDependencies": {

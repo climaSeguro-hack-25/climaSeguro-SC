@@ -1,0 +1,41 @@
+<script setup>
+</script>
+<template>
+  <section class="climaHoje">
+    <a href="#">
+      <img src="/public/quadro-clima.png" alt="Climas">
+    </a>
+    <a href="#">
+      <h2>
+        Clima Hoje
+      </h2>
+      </a>
+  </section>
+</template>
+<style scoped>
+.climaHoje{
+  background: linear-gradient(to bottom, #164969 ,#5BB0D0 ,#164969);
+  border-radius: 20px;
+  box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
+  padding: 3rem;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  & img{
+  background: linear-gradient(135deg, #FFF2C9, #C4F1FF);
+  box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+
+  }
+  & h2{
+    font-size: 2.5rem;
+      color:#ffffff;
+      box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.5vw 4vw;
+      border-radius: 40px;
+      margin: 0 10vw;
+  }
+}
+</style>
