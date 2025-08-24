@@ -6,7 +6,7 @@
       O Clima Seguro – SC é um projeto desenvolvido para o Hackathon 2025, com o objetivo de fornecer previsões do tempo, alertas climáticos e informações em tempo real para aumentar a segurança da população joinvilense
     </p>
     <button>
-      <a href="#">Saiba mais...</a>
+      <RouterLink to="/equipe">Saiba mais...</RouterLink>
     </button>
   </section>
 </template>

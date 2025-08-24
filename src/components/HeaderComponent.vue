@@ -1,11 +1,13 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 </script>
 <template>
   <header>
     <h1 class="logo">
-      <a href="#">
+      <RouterLink to="/">
         <img src="/public/logo.png" alt="logo">
-      </a>
+      </RouterLink>
     </h1>
     <div class="menu-hamburguer">
       <input type="checkbox" id="menu-toggle" />
@@ -16,32 +18,43 @@
       </label>
       <div class="overlay">
         <nav class="menu">
-          <a href="#" class="logo">
+          <RouterLink to="/">
             <img src="/public/logo.png" alt="logo">
-          </a>
+          </RouterLink>
           <ul class="menu-list">
-            <li class="white"><a href="#"> Home</a></li>
-            <li class="white">
-              <a href="#"> Hoje</a>
+            <li>
+              <RouterLink to="/">
+                <i class="mdi mdi-home"></i>
+                Home
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink to="#">
+                <i class="mdi mdi-thermometer"></i>
+                Hoje
+              </RouterLink>
             </li>
             <li class="notificacao">
               <a href="#">
                 <input type="checkbox" id="notificacao-toggle" />
                 <label for="notificacao-toggle" class="notificacao-icon">
                   <div class="comAlerta">
-                    <i class="fa-regular fa-bell"></i>
+                    <i class="mdi mdi-bell"></i>
                   </div>
                   <div class="semAlerta">
-                    <i class="fa-regular fa-bell-slash"></i>
+                    <i class="mdi mdi-bell-off"></i>
                   </div>
                 </label>
               </a>
             </li>
             <li>
-              <a href="#">Sobre nós</a>
+              <RouterLink to="/equipe">
+                 <i class="mdi mdi-account-group"></i>
+                Sobre nós
+              </RouterLink>
             </li>
             <li>
-              <a href="#"> <i class="fa-regular fa-circle-user"></i> Fazer Login</a>
+              <a href="#"> <i class="mdi mdi-account"></i> Fazer Login</a>
             </li>
           </ul>
         </nav>
@@ -83,8 +96,8 @@ header {
       list-style: none;
       padding: 0;
       margin: 0 40vw;
-      border: 2px solid;
-      border-image: linear-gradient(to bottom, white, black)1;
+      border: #ffffff 2px solid;
+      border-radius: 20px;
 
 
       & li {
@@ -97,24 +110,15 @@ header {
         & a {
           text-decoration: none;
           font-size: 2rem;
-          color: #000000;
+          color: #ffffff;
           transition: color 0.5s ease;
           text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
         }
 
         & a:hover {
-          color: #ffffff;
+          color: #000000;
         }
 
-      }
-
-      & li.white a {
-        color: #ffffff;
-
-      }
-
-      & li.white a:hover {
-        color: #000000;
       }
     }
   }

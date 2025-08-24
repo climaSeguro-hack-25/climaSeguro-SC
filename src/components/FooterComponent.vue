@@ -10,13 +10,13 @@
           </p>
           <li>
             <a href="https://www.instagram.com/clima_seguro.ifc/">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="mdi mdi-instagram"></i>
               clima_seguro.ifc
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/profile.php?id=61579871360977">
-              <i class="fa-brands fa-facebook"></i>
+              <i class="mdi mdi-facebook"></i>
               Clima Seguro - IFC
             </a>
           </li>
@@ -29,11 +29,11 @@
           Contato
           </p>
           <li>
-            <i class="fa-regular fa-envelope"></i>
+            <i class="mdi mdi-email"></i>
             climasegurosc@gmail.com
           </li>
           <li>
-            <i class="fa-solid fa-phone-volume"></i>
+            <i class="mdi mdi-phone-classic"></i>
             +55 (47) 99206-7618
           </li>
         </ul>

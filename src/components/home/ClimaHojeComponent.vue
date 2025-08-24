@@ -2,14 +2,14 @@
 </script>
 <template>
   <section class="climaHoje">
-    <a href="#">
+    <RouterLink to="#">
       <img src="/public/quadro-clima.png" alt="Climas">
-    </a>
-    <a href="#">
+    </RouterLink>
+    <RouterLink to="#">
       <h2>
         Clima Hoje
       </h2>
-      </a>
+    </RouterLink>
   </section>
 </template>
 <style scoped>
@@ -25,6 +25,7 @@
   & img{
   background: linear-gradient(135deg, #FFF2C9, #C4F1FF);
   box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
   border-radius: 30px;
 
   }
