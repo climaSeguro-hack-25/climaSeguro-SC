@@ -15,7 +15,7 @@
           <h3>Roberta Ribeiro</h3>
           <input type="checkbox" id="recolhivelRoberta" />
           <label for="recolhivelRoberta" class="recolhivelRoberta-icon">
-            <i class="fa-regular fa-square-caret-up"></i>
+            <i class="mdi mdi-chevron-up"></i>
           </label>
           <div class="sobre">
             <p>Turma: <span class="resposta">2Info2</span></p>
@@ -34,7 +34,7 @@
           <h3>Sara Schulz</h3>
           <input type="checkbox" id="recolhivelSara" />
           <label for="recolhivelSara" class="recolhivelSara-icon">
-            <i class="fa-regular fa-square-caret-up"></i>
+            <i class="mdi mdi-chevron-up"></i>
           </label>
           <div class="sobre">
             <p>Turma: <span class="resposta">2Info2</span></p>
@@ -47,13 +47,13 @@
       <div class="membro">
         <!-- YASMIN KAUANY DE OLIVEIRA -->
         <p>
-          <img src="/public/provisorio.png" alt="sara">
+          <img src="/public/yasminOliveira.png" alt="sara">
         </p>
         <div class="seperar">
           <h3>Yasmin Kauany de Oliveira</h3>
           <input type="checkbox" id="recolhivelYasmin" />
           <label for="recolhivelYasmin" class="recolhivelYasmin-icon">
-            <i class="fa-regular fa-square-caret-up"></i>
+            <i class="mdi mdi-chevron-up"></i>
           </label>
           <div class="sobre">
             <p>Turma: <span class="resposta">2Info2</span></p>
@@ -102,9 +102,15 @@
         font-size: 1.5rem;
         transition: color 0.3s ease;
         text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.35);
+        padding:  0 7px;
+        border-radius: 20px;
+        transition: all 0.5s ease;
+        display: inline-block;
       }
       & label:hover{
         color: #C0392B;
+        background: rgba(255, 255, 255, 0.35);
       }
       & .sobre {
         background: #ffffff;
@@ -133,12 +139,18 @@
   transition: all 0.5s ease;
   font-size: 20px;
 }
+
 /*recolhivel Roberta */
 #recolhivelRoberta {
   display: none;
 }
 #recolhivelRoberta:checked~.sobre {
   transform: scale(1);
+}
+#recolhivelRoberta:checked + label {
+  transform: rotate(180deg);
+  color: #C0392B;
+  background: rgba(255, 255, 255, 0.35);
 }
 /*recolhivel Sara */
 #recolhivelSara {
@@ -147,12 +159,22 @@
 #recolhivelSara:checked~.sobre {
   transform: scale(1);
 }
+#recolhivelSara:checked + label {
+  transform: rotate(180deg);
+  color: #C0392B;
+  background: rgba(255, 255, 255, 0.35);
+}
 /*recolhivel Yasmin */
 #recolhivelYasmin {
   display: none;
 }
 #recolhivelYasmin:checked~.sobre {
   transform: scale(1);
+}
+#recolhivelYasmin:checked + label {
+  transform: rotate(180deg);
+  color: #C0392B;
+  background: rgba(255, 255, 255, 0.35);
 }
 .space{
   width: 100%;
