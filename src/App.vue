@@ -1,35 +1,25 @@
 <script setup>
-
+/*Header/Footer*/
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+/*Home page
+import BannerHomeComponent  from '@/components/home/BannerHomeComponent.vue';
+import SelectComponent from '@/components/home/SelectComponent.vue';
+import ClimaHojeComponent from '@/components/home/ClimaHojeComponent.vue';
+import SobreComponent from '@/components/home/SobreComponent.vue';*/
+/*Sobre page
 import BannerSobreNosComponent from '@/components/sobreNos/BannerSobreNosComponent.vue';
 import ObjetivoComponent from '@/components/sobreNos/objetivoComponent.vue';
-import equipeComponent from '@/components/sobreNos/equipeComponent.vue';
-/*import BannerComponent  from '@/components/BannerComponent.vue';
-import SelectComponent from '@/components/SelectComponent.vue';
-import ClimaHojeComponent from '@/components/ClimaHojeComponent.vue';
-import SobreComponent from '@/components/SobreComponent.vue';
-*/
+import equipeComponent from '@/components/sobreNos/equipeComponent.vue';*/
+/**/
 </script>
 <template>
-  <header>
     <HeaderComponent/>
-  </header>
   <main>
-    <BannerSobreNosComponent/>
-    <ObjetivoComponent/>
-    <equipeComponent/>
-    <!--
-    <BannerComponent/>
-    <SelectComponent/>
-    <ClimaHojeComponent/>
-    <SobreComponent/>
-    -->
-
+    <RouterView />
+    <!---->
   </main>
-  <footer>
     <FooterComponent/>
-  </footer>
 </template>
 <style scoped>
 

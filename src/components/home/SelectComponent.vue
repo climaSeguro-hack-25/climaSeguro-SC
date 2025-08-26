@@ -4,20 +4,23 @@
   <section class="select">
     <ul>
       <li>
-        <a href="#">
+        <RouterLink to="/equipe">
+          <i class="mdi mdi-book-open-blank-variant"></i>
           Nossa História
-        </a>
+        </RouterLink>
       </li>
       <li>
-        <a href="#">
+        <RouterLink to="#">
+          <i class="mdi mdi-thermometer"></i>
           Temperatura Atual
-        </a>
+        </RouterLink>
       </li>
 
       <li>
-        <a href="#">
-          Alertas de Chuva
-        </a>
+        <RouterLink to="#">
+          <i class="mdi mdi-umbrella">
+          Alertas de Chuva</i>
+        </RouterLink>
       </li>
     </ul>
   </section>
@@ -38,6 +41,11 @@
 
     & li {
       font-size: 2rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+      & i{
+        text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.8);
+      }
+
     }
   }
 }
