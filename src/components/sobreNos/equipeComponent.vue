@@ -9,7 +9,7 @@
       <div class="membro">
         <!-- ROBERTA RIBEIRO -->
         <p>
-          <img src="/public/provisorio.png" alt="roberta">
+          <img src="/public/RobertaRibeiro.png" alt="roberta">
         </p>
         <div class="seperar">
           <h3>Roberta Ribeiro</h3>
@@ -44,8 +44,8 @@
         </div>
       </div>
 
-      <div class="membro">
-        <!-- YASMIN KAUANY DE OLIVEIRA -->
+      <!--<div class="membro">
+         YASMIN KAUANY DE OLIVEIRA
         <p>
           <img src="/public/yasminOliveira.png" alt="sara">
         </p>
@@ -61,7 +61,7 @@
             <p>Email: <span class="resposta">yass.oliveiraifc@gmail.com</span></p>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
     <div class="space">
 
@@ -72,6 +72,8 @@
 .equipe {
   width: 100%;
   text-align: center;
+  transition: all 0.5s ease;
+  font-size: 20px;
 
   & .titulo {
     margin: 2vw 0;
@@ -86,13 +88,14 @@
     box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
     align-items: center;
     display: flex;
+    justify-content: center;
 
     & .membro {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 3rem;
-      margin: 20px;
+      margin: 30px 2vw;
       & h3{
         text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
       }
@@ -135,10 +138,6 @@
   transform: scale(0);
   transition: transform 0.5s ease-in-out;
 }
-.equipe {
-  transition: all 0.5s ease;
-  font-size: 20px;
-}
 
 /*recolhivel Roberta */
 #recolhivelRoberta {
@@ -164,7 +163,7 @@
   color: #C0392B;
   background: rgba(255, 255, 255, 0.35);
 }
-/*recolhivel Yasmin */
+/*recolhivel Yasmin
 #recolhivelYasmin {
   display: none;
 }
@@ -176,6 +175,7 @@
   color: #C0392B;
   background: rgba(255, 255, 255, 0.35);
 }
+*/
 .space{
   width: 100%;
   padding: 4rem 0;
