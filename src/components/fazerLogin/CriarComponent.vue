@@ -17,30 +17,34 @@
         <p class="comentario">
           Já possui uma conta?
         </p>
-        <button class="login">
-          <RouterLink to="/login">
+        <RouterLink to="/login">
+          <button class="login">
             <span class="link">
               Fazer Login
             </span>
-          </RouterLink>
-        </button>
-        <div class="email">
-          <label for="email" class="text">e-mail:
+          </button>
+        </RouterLink>
+        <div class="caixas">
+          <div class="email">
+            <label for="email" class="text">e-mail:</label>
             <input type="email" id="email" name="email" placeholder="username@email.com" class="caixa" required>
-          </label>
-        </div>
 
-        <div class="senha">
-          <label for="password" class="text">Senha:
+          </div>
+
+          <div class="senha">
+            <label for="password" class="text">Senha:</label>
             <input type="password" id="password" name="password" placeholder="Crie uma senha" class="caixa" required>
-          </label>
-          <p class="requisito">*Use 8 ou mais letras, números e símbolos</p>
-          <label for="password" class="text">confirmar senha:
+
+            <p class="requisito">*Use 8 ou mais letras, números e símbolos</p>
+
+            <label for="password" class="text">confirmar senha:</label>
             <input type="password" id="password" name="password" placeholder="confirme sua senha" class="caixa"
               required>
-          </label>
+
+          </div>
         </div>
         <button type="submit" class="criar">Entrar</button>
+
       </div>
     </div>
   </section>
@@ -59,7 +63,7 @@
     border-radius: 50px;
     display: flex;
     box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
-    padding: 5vw;
+    padding: 5vw 10vw;
     gap: 40px;
 
     & .letreiro {
@@ -80,12 +84,17 @@
       & h3 {
         font-size: 35px;
         text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        width: 228px;
+        height: 82px;
+        text-align: center;
       }
     }
 
     & .criar {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       & .comentario {
         font-size: 10px;
@@ -117,14 +126,22 @@
         }
       }
 
-      & div {
-        margin: 10px;
+      & .caixas {
         display: flex;
         flex-direction: column;
+        gap: 10px;
 
-        & .text {
-          font-size: 20px;
-          color: #000000;
+        & .email,
+        .senha {
+          margin: 0 0 10px 0;
+          display: flex;
+          flex-direction: column;
+
+          & .text {
+            display: block;
+            font-size: 20px;
+            color: #000000;
+          }
 
           & .caixa {
             border: #776D6D 1.5px solid;
@@ -139,15 +156,16 @@
             font-family: 'Julius Sans One', sans-serif;
             font-size: 15px;
           }
-        }
 
-        & .requisito {
-          font-size: 10px;
-          color: #A20000
+
+          & .requisito {
+            font-size: 10px;
+            color: #A20000
+          }
         }
       }
 
-      & .criar {
+      & button.criar {
         background: #164969;
         border: #164969 1.5px solid;
         border-radius: 10px;

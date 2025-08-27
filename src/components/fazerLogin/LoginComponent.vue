@@ -14,24 +14,25 @@
         </h3>
       </div>
       <div class="login">
-        <button class="Criar">
-          <RouterLink to="/criar">
+        <RouterLink to="/criar">
+          <button class="Criar">
             <span class="link">
               Criar Conta
             </span>
-          </RouterLink>
-        </button>
-        <div class="email">
-          <label for="email" class="text">e-mail:
+          </button>
+        </RouterLink>
+        <div class="caixas">
+          <div class="email">
+            <label for="email" class="text">e-mail:</label>
             <input type="email" id="email" name="email" placeholder="username@email.com" class="caixa" required>
-          </label>
-        </div>
-        <div class="senha">
-          <label for="password" class="text">Senha:
+          </div>
+          <div class="senha">
+            <label for="password" class="text">Senha:</label>
             <input type="password" id="password" name="password" placeholder="*********" class="caixa" required>
-          </label>
-          <RouterLink to="#" class="esqueci">Esqueceu sua senha?</RouterLink>
+            <RouterLink to="#" class="esqueci">Esqueceu sua senha?</RouterLink>
+          </div>
         </div>
+
         <button type="submit" class="entrar">Entrar</button>
       </div>
     </div>
@@ -51,7 +52,7 @@
     border-radius: 50px;
     display: flex;
     box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
-    padding: 5vw;
+    padding: 8vw 10vw;
     gap: 40px;
 
     & .letreiro {
@@ -72,12 +73,17 @@
       & h3 {
         font-size: 35px;
         text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        width: 230px;
+        height: 35px;
+        text-align: center;
       }
     }
 
     & .login {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       & .Criar {
         background: #ffffff;
@@ -103,7 +109,8 @@
         }
       }
 
-      & div {
+      & .email,
+      .senha {
         margin: 10px;
         display: flex;
         flex-direction: column;
@@ -111,21 +118,22 @@
         & .text {
           font-size: 20px;
           color: #000000;
-
-          & .caixa {
-            border: #776D6D 1.5px solid;
-            border-radius: 10px;
-            padding: 10px;
-            color: #1E1E1E;
-          }
-
-          & .caixa::placeholder {
-            color: #1E1E1E;
-            opacity: 1;
-            font-family: 'Julius Sans One', sans-serif;
-            font-size: 15px;
-          }
         }
+
+        & .caixa {
+          border: #776D6D 1.5px solid;
+          border-radius: 10px;
+          padding: 10px;
+          color: #1E1E1E;
+        }
+
+        & .caixa::placeholder {
+          color: #1E1E1E;
+          opacity: 1;
+          font-family: 'Julius Sans One', sans-serif;
+          font-size: 15px;
+        }
+
 
         & .esqueci {
           font-size: 10px;
