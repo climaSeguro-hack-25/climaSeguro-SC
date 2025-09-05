@@ -2,10 +2,10 @@
 </script>
 <template>
   <section class="climaHoje">
-    <RouterLink to="#">
+    <RouterLink to="/clima">
       <img src="/public/quadro-clima.png" alt="Climas">
     </RouterLink>
-    <RouterLink to="#">
+    <RouterLink to="/clima">
       <h2>
         Clima Hoje
       </h2>
