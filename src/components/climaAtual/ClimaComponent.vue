@@ -1,47 +1,105 @@
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, computed } from "vue";
 
 const weather = ref(null);
+const cidadeSelecionada = ref("");
+const cidades = [
+  { nome: "Joinville", lat: -26.3045, lon: -48.8487 },
+  { nome: "Jaraguá do Sul", lat: -26.4851, lon: -49.0661 },
+  { nome: "São Francisco do Sul", lat: -26.2433, lon: -48.6383 },
+  { nome: "Balneário Barra do Sul", lat: -26.4608, lon: -48.6114 },
+  { nome: "Itapoá", lat: -26.1158, lon: -48.6182 },
+  { nome: "Garuva", lat: -26.0294, lon: -48.8527 },
+  { nome: "Guaramirim", lat: -26.4743, lon: -49.0025 },
+  { nome: "Schroeder", lat: -26.4123, lon: -49.0733 },
+  { nome: "Massaranduba", lat: -26.6125, lon: -49.005 },
+  { nome: "Corupá", lat: -26.425, lon: -49.2467 },
+  { nome: "São Bento do Sul", lat: -26.2495, lon: -49.3833 },
+  { nome: "Rio Negrinho", lat: -26.2594, lon: -49.5189 },
+  { nome: "Campo Alegre", lat: -26.1958, lon: -49.2675 },
+  { nome: "Blumenau", lat: -26.9189, lon: -49.0653 },
+  { nome: "Pomerode", lat: -26.7406, lon: -49.1786 },
+  { nome: "Balneário Camboriú", lat: -26.9926, lon: -48.6352 },
+  { nome: "Itajaí", lat: -26.9101, lon: -48.6705 },
+  { nome: "Penha", lat: -26.7697, lon: -48.6453 },
+  { nome: "Navegantes", lat: -26.8946, lon: -48.6546 },
+  { nome: "Florianópolis", lat: -27.5949, lon: -48.5482 }
+];
 
-onMounted(async () => {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=-26.3753&lon=-48.7183&units=metric&appid=e0f01069437f3d0fc36c33301bd037b1&lang=pt_br`;
-  const res = await fetch(url);
-  const data = await res.json();
-  weather.value = data.list[0];
-});
+async function buscarClima() {
+  if (!cidadeSelecionada.value) return;
+  const cidade = cidades.find(c => c.nome === cidadeSelecionada.value);
+  if (!cidade) return;
+
+  const apiKey = "e0f01069437f3d0fc36c33301bd037b1";
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${cidade.lat}&lon=${cidade.lon}&units=metric&appid=${apiKey}&lang=pt_br`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    weather.value = data.list[0];
+  } catch (err) {
+    console.error("Erro ao buscar clima:", err);
+  }
+}
 
 const timePart = computed(() => weather.value ? weather.value.dt_txt.split(" ")[1] : "");
 
 const bgClass = computed(() => {
   if (!weather.value) return "loading";
   const temp = weather.value.main.temp;
-  if (temp <= 15) {
-    return "frio";
-  } else if (temp <= 25) {
-    return "agradavel";
-  } else{
-    return "quente";
-  }
+  if (temp <= 15) return "frio";
+  else if (temp <= 25) return "agradavel";
+  else return "quente";
 });
 </script>
 
 <template>
-  <section>
+  <section class="geral">
     <div :class="['container', bgClass]">
+    </div>
+    <div v-if="weather">
+      <h1 class="cidade">{{ cidadeSelecionada }}</h1>
+      <p class="hora">{{ timePart }}</p>
+      <h2 class="temperatura">{{ weather.main.temp }}°C</h2>
+      <h3 class="umidade">{{ weather.main.humidity }}% <i class="mdi mdi-water-percent"></i></h3>
+    </div>
 
-      <div v-if="weather">
-        <p class="hora">{{ timePart }}</p>
-        <h2 class="temperatura">{{ weather.main.temp }}°C</h2>
-        <h3 class="umidade">{{ weather.main.humidity }}<i class="mdi mdi-water-percent"></i></h3>
-
-      </div>
-      <div v-else>
-        <p class="carregar">Carregando...</p>
-      </div>
+    <div class="select-container">
+      <select v-model="cidadeSelecionada" @change="buscarClima">
+        <option disabled value="">🌍 Selecione uma cidade</option>
+        <option v-for="c in cidades" :key="c.nome" :value="c.nome">{{ c.nome }}</option>
+      </select>
     </div>
   </section>
 </template>
 <style scoped>
+.geral{
+ background: url(/public/selectCit-img.png) no-repeat center center/cover;
+ position: absolute;
+ position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+ & .select-container {
+  display: flex;
+  justify-content: center;
+   position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+  & select {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background: white;
+    cursor: pointer;
+  }
+}
+}
 /* estilos personalizados */
 .frio {
   min-height: 100vh;
@@ -86,6 +144,7 @@ const bgClass = computed(() => {
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 }
+
 .agradavel {
   min-height: 100vh;
   width: 100%;
@@ -129,6 +188,7 @@ const bgClass = computed(() => {
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 }
+
 .quente {
   min-height: 100vh;
   width: 100%;
@@ -172,21 +232,5 @@ const bgClass = computed(() => {
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 }
-.loading {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
-  .carregar {
-    /*Posição*/
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*Decoração*/
-    font-size: 5rem;
-    color: #000000;
-    text-shadow: -7px 10px 20px rgba(0, 0, 0, 1);
-  }
-}
+
 </style>
