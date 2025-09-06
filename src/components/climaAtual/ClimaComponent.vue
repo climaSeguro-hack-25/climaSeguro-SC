@@ -4,6 +4,7 @@ import { ref, computed } from "vue";
 const weather = ref(null);
 const cidadeSelecionada = ref("");
 const cidades = [
+  {nome: "Vale da Morte(EUA - quente)", lat: 36.5323, lon: -116.9325 },
   { nome: "Balneário Barra do Sul", lat: -26.4608, lon: -48.6114 },
   { nome: "Balneário Camboriú", lat: -26.9926, lon: -48.6352 },
   { nome: "Blumenau", lat: -26.9189, lon: -49.0653 },
@@ -174,10 +175,21 @@ const bgClass = computed(() => {
     position: relative;
     box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
 
+     & .cidade {
+      /*Posição*/
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*Decoração*/
+      font-size: 2rem;
+      color: #79C49E;
+      text-shadow: -7px 10px 20px rgba(0, 0, 0, 1);
+     }
     & .temperatura {
       /*Posição*/
       position: absolute;
-      top: 40%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       /*Decoração*/
@@ -189,7 +201,7 @@ const bgClass = computed(() => {
     & .umidade {
       /*Posição*/
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       /*Decoração*/
@@ -201,13 +213,18 @@ const bgClass = computed(() => {
     .hora {
       /*Posição*/
       position: absolute;
-      top: 56%;
+      top: 61%;
       left: 49%;
       transform: translate(-50%, -50%);
       /*Decoração*/
       font-size: 2rem;
       color: #79C49E;
       text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+
+    & select{
+      border: 2px solid #79C49E;
+      background: #79C49E;
     }
   }
 
@@ -218,10 +235,21 @@ const bgClass = computed(() => {
     position: relative;
     box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
 
+    & .cidade{
+      /*Posição*/
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /*Decoração*/
+      font-size: 2rem;
+      color: #A20000;
+      text-shadow: -7px 10px 20px rgba(0, 0, 0, 1);
+    }
     & .temperatura {
       /*Posição*/
       position: absolute;
-      top: 40%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       /*Decoração*/
@@ -233,7 +261,7 @@ const bgClass = computed(() => {
     & .umidade {
       /*Posição*/
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       /*Decoração*/
@@ -245,13 +273,18 @@ const bgClass = computed(() => {
     .hora {
       /*Posição*/
       position: absolute;
-      top: 56%;
+      top: 61%;
       left: 49%;
       transform: translate(-50%, -50%);
       /*Decoração*/
       font-size: 2rem;
       color: #A20000;
       text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+
+    & select{
+      border: 2px solid #A20000;
+      background: #A20000;
     }
   }
 }
