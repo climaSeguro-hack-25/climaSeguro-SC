@@ -12,12 +12,14 @@ import BannerSobreNosComponent from '@/components/sobreNos/BannerSobreNosCompone
 import ObjetivoComponent from '@/components/sobreNos/objetivoComponent.vue';
 import equipeComponent from '@/components/sobreNos/equipeComponent.vue';*/
 /**/
+import AlertaComponent from './components/alerta/AlertaComponent.vue';
 </script>
 <template>
     <HeaderComponent/>
-  <main>
+  <main><!--
     <RouterView />
-    <!---->
+    -->
+    <AlertaComponent/>
   </main>
     <FooterComponent/>
 </template>
