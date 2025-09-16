@@ -19,6 +19,10 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/vue-fontawesome": "^3.1.1",
     "@mdi/font": "^7.4.47",
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },
@@ -29,8 +33,22 @@
     "eslint": "^9.31.0",
     "eslint-plugin-vue": "~10.3.0",
     "globals": "^16.3.0",
+    "nodemon": "^3.1.10",
     "prettier": "3.6.2",
     "vite": "npm:rolldown-vite@latest",
     "vite-plugin-vue-devtools": "^8.0.0"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/climaSeguro-hack-25/climaSeguro-SC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/climaSeguro-hack-25/climaSeguro-SC/issues"
+  },
+  "homepage": "https://github.com/climaSeguro-hack-25/climaSeguro-SC#readme"
 }
