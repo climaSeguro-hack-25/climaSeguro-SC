@@ -17,7 +17,7 @@
       </li>
 
       <li>
-        <RouterLink to="#">
+        <RouterLink to="/alerta">
           <i class="mdi mdi-umbrella">
           Alertas de Chuva</i>
         </RouterLink>
