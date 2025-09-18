@@ -1,5 +1,4 @@
 <script setup>
-/*Header/Footer*/
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 
@@ -7,13 +6,11 @@ import FooterComponent from '@/components/FooterComponent.vue';
 <template>
 
     <HeaderComponent/>
-  <main><!---->
+  <main>
     <RouterView />
   </main>
     <FooterComponent/>
-    <!---->
-    <CriarComponent/>
+   
 </template>
 <style scoped>
-
 </style>
