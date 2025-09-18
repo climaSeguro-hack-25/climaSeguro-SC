@@ -54,7 +54,7 @@ import { RouterLink } from 'vue-router';
               </RouterLink>
             </li>
             <li>
-              <a href="#"> <i class="mdi mdi-account"></i> Fazer Login</a>
+              <RouterLink to="/login"> <i class="mdi mdi-account"></i> Fazer Login</RouterLink>
             </li>
           </ul>
         </nav>
