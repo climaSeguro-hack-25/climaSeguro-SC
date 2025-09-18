@@ -13,6 +13,11 @@ const routes = [
     component: () => import('@/views/TeamView.vue'),
   },
   {
+    path: '/clima',
+    name: 'Clima',
+    component: () => import('@/views/ClimaView.vue'),
+  },
+  {
     path: '/criar',
     name: 'Create',
     component: () => import('@/views/CreateView.vue'),
@@ -21,7 +26,15 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import('@/views/LoginView.vue'),
+
   }
+
+  },
+  {
+    path: '/alerta',
+    name: 'Alert',
+    component: () => import('@/views/alertView.vue'),
+  },
 ];
 
 const router = createRouter({

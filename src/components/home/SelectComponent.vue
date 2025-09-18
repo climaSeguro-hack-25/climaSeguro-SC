@@ -10,7 +10,7 @@
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="#">
+        <RouterLink to="/clima">
           <i class="mdi mdi-thermometer"></i>
           Temperatura Atual
         </RouterLink>

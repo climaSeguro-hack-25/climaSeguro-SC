@@ -45,18 +45,19 @@ const registerUser = async () => {
         <div class="caixas">
           <div class="email">
             <label for="email" class="text">e-mail:</label>
-            <input v-model="email" type="email" id="email" name="email" placeholder="username@email.com" class="caixa" required>
 
+            <input v-model="email" type="email" id="email" name="email" placeholder="username@email.com" class="caixa" required>
+    
           </div>
 
           <div class="senha">
             <label for="password" class="text">Senha:</label>
+
             <input v-model="password" type="password" id="password" name="password" placeholder="Crie uma senha" class="caixa" required>
 
           </div>
         </div>
         <button type="submit" class="criar" @click="registerUser" >Entrar</button>
-
       </div>
     </div>
   </section>
