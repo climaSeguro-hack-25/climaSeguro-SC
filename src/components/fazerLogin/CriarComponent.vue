@@ -18,19 +18,6 @@ const registerUser = async () => {
   }
 };
 </script>
-
-<template>
-  <section>
-    <h2>Cadastro</h2>
-    <input v-model="email" placeholder="E-mail" />
-    <input  type="password" placeholder="Senha" />
-    <button @click="registerUser">Cadastrar</button>
-
-    <p>{{ message }}</p>
-  </section>
-</template>
-
-
 <template>
   <section class="fazerLogin">
     <div class="fundo">
@@ -66,14 +53,9 @@ const registerUser = async () => {
             <label for="password" class="text">Senha:</label>
             <input v-model="password" type="password" id="password" name="password" placeholder="Crie uma senha" class="caixa" required>
 
-
-            <label for="password" class="text">confirmar senha:</label>
-            <input type="password" id="password" name="password" placeholder="confirme sua senha" class="caixa"
-              required>
-
           </div>
         </div>
-        <button type="submit" class="criar">Entrar</button>
+        <button type="submit" class="criar" @click="registerUser" >Entrar</button>
 
       </div>
     </div>
