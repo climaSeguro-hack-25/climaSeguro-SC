@@ -7,6 +7,9 @@ body{
   font-family: 'Julius Sans One', sans-serif;
   background-color: #E8F7FF;
 }
+button{
+  font-family: 'Julius Sans One', sans-serif;
+}
 ul{
   list-style: none;
 }
