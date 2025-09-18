@@ -12,6 +12,21 @@ const routes = [
     name: 'Team',
     component: () => import('@/views/TeamView.vue'),
   },
+  {
+    path: '/criar',
+    name: 'Create',
+    component: () => import('@/views/CreateView.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/LoginView.vue'),
+  },
+  {
+    path: '/clima',
+    name: 'Clima',
+    component: () => import('@/views/ClimaView.vue'),
+  },
 ];
 
 const router = createRouter({

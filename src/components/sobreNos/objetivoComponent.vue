@@ -7,7 +7,7 @@
     </div>
     <div class="texto">
       <p>
-        texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto  exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto  exemplar texto exemplar texto exemplar texto exemplar texto exemplar texto
+        O projeto Clima Seguro - SC tem como objetivo oferecer uma plataforma segura para ajudar a população a lidar com os desafios climáticos, disponibilizando previsões em tempo real e alertas instantâneos sobre eventos extremos, como ondas de calor. Isso contribui para aumentar a segurança da comunidade e reforçar a prevenção e a tomada de decisões em situações de risco.
       </p>
     </div>
   </section>
