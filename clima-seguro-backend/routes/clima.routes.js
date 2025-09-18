@@ -1,7 +1,8 @@
-const express = require('express');
+import express from "express";
+import climaController from "../controllers/climaController.js";
+
 const router = express.Router();
-const climaController = require('../controllers/climaController');
 
-router.get('/:cidade', climaController.obterClimaPorCidade);
+router.get("/:cidade", climaController.obterClimaPorCidade);
 
-module.exports = router;
+export default router;
