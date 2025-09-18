@@ -1,4 +1,22 @@
 <script setup>
+import { ref } from "vue";
+import axios from "axios";
+
+const email = ref("");
+const password = ref("");
+const message = ref("");
+
+const registerUser = async () => {
+  try {
+    const res = await axios.post("http://localhost:3000/api/users/register", {
+      email: email.value,
+      password: password.value,
+    });
+    message.value = res.data.message;
+  } catch (err) {
+    message.value = err.response?.data?.error || "Erro ao cadastrar!";
+  }
+};
 </script>
 <template>
   <section class="fazerLogin">
@@ -27,24 +45,19 @@
         <div class="caixas">
           <div class="email">
             <label for="email" class="text">e-mail:</label>
-            <input type="email" id="email" name="email" placeholder="username@email.com" class="caixa" required>
 
+            <input v-model="email" type="email" id="email" name="email" placeholder="username@email.com" class="caixa" required>
+    
           </div>
 
           <div class="senha">
             <label for="password" class="text">Senha:</label>
-            <input type="password" id="password" name="password" placeholder="Crie uma senha" class="caixa" required>
 
-            <p class="requisito">*Use 8 ou mais letras, números e símbolos</p>
-
-            <label for="password" class="text">confirmar senha:</label>
-            <input type="password" id="password" name="password" placeholder="confirme sua senha" class="caixa"
-              required>
+            <input v-model="password" type="password" id="password" name="password" placeholder="Crie uma senha" class="caixa" required>
 
           </div>
         </div>
-        <button type="submit" class="criar">Entrar</button>
-
+        <button type="submit" class="criar" @click="registerUser" >Entrar</button>
       </div>
     </div>
   </section>
