@@ -2,13 +2,14 @@
 </script>
 <template>
   <section class="climaHoje">
-    <RouterLink to="#">
+    <RouterLink to="/clima">
       <img src="/public/quadro-clima.png" alt="Climas">
     </RouterLink>
-    <RouterLink to="#">
+    <RouterLink to="/clima">
       <h2>
+      <button>
         Clima Hoje
-      </h2>
+      </button>
     </RouterLink>
   </section>
 </template>
@@ -29,14 +30,20 @@
   border-radius: 30px;
 
   }
-  & h2{
-    font-size: 2.5rem;
+  & button{
+      font-size: 2.5rem;
       color:#ffffff;
       box-shadow: 0 0 75px rgba(0, 0, 0, 0.8);
       background: rgba(0, 0, 0, 0.4);
       padding: 0.5vw 4vw;
       border-radius: 40px;
       margin: 0 10vw;
+      border:none;
+      transition: all 0.8s ease ;
+  }
+  & button:hover{
+    background: rgba(255, 255, 255, 0.6);
+    color: #164969;
   }
 }
 </style>
