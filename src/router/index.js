@@ -12,6 +12,11 @@ const routes = [
     name: 'Team',
     component: () => import('@/views/TeamView.vue'),
   },
+  {
+    path: '/alerta',
+    name: 'Alert',
+    component: () => import('@/views/alertView.vue'),
+  }
 ];
 
 const router = createRouter({
