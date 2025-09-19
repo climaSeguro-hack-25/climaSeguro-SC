@@ -1,16 +1,16 @@
 <script setup>
+import HeaderComponent from '@/components/HeaderComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
+
 </script>
-
 <template>
-  <header>
 
-  </header>
-  <h1>hello world</h1>
+    <HeaderComponent/>
   <main>
-
+    <RouterView />
   </main>
+    <FooterComponent/>
+   
 </template>
-
 <style scoped>
-
 </style>
