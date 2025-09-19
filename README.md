@@ -25,13 +25,13 @@ Clima Seguro é um site que mostra previsão do tempo e envia alertas de chuva p
 MIT — veja o arquivo LICENSE.
 
 ## Contato
-Sara — sara.ifc2024@gmail.com
-Roberta — robertaapbeta2212@gmail.com
-Email do projeto — climasegurosc@gmail.com
+- Sara — sara.ifc2024@gmail.com
+- Roberta — robertaapbeta2212@gmail.com
+- Email do projeto — climasegurosc@gmail.com
 
 ## Redes Sociais
-- ![Instagram](https://www.instagram.com/clima_seguro.ifc/)
-- ![Facebook](https://www.facebook.com/people/Clima-Seguro-IFC/61579871360977/)
+- [Instagram](https://www.instagram.com/clima_seguro.ifc/)
+- [Facebook](https://www.facebook.com/people/Clima-Seguro-IFC/61579871360977/)
 
 
 
