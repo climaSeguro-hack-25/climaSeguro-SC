@@ -3,7 +3,7 @@
 Clima Seguro é um site que mostra previsão do tempo e envia alertas de chuva para usuários.
 
 ## Link do projeto
-![Link](https://climaseguro-hack-25.github.io/)
+[Link](https://climaseguro-hack-25.github.io/)
 
 ## Funcionalidades
 - Previsão do tempo por cidade
