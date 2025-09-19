@@ -10,6 +10,7 @@
       <button>
         Clima Hoje
       </button>
+      </h2>
     </RouterLink>
   </section>
 </template>
