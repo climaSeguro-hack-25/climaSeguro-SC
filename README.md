@@ -1,35 +1,37 @@
-# clima-seguro-SC
+# Clima Seguro
 
-This template should help get you started developing with Vue 3 in Vite.
+Clima Seguro é um site que mostra previsão do tempo e envia alertas de chuva para usuários.
 
-## Recommended IDE Setup
+## Link do projeto
+![Link](https://climaseguro-hack-25.github.io/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Funcionalidades
+- Previsão do tempo por cidade
+- Alertas por e-mail quando há previsão de chuva forte
+- Página de usuário com preferências
 
-## Customize configuration
+## Tecnologias
+- Frontend: Vue 3, Tailwind CSS
+- Backend: Node.js, Express
+- API de tempo: OpenWeatherMap
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Como rodar (rápido)
+1. Clone: `git clone https://github.com/seu-usuario/clima-seguro.git`
+2. Instale dependências: `npm install`
+3. Crie `.env` com `OPENWEATHER_KEY=seu_token`
+4. Inicie: `npm run dev`
 
-## Project Setup
+## Licença
+MIT — veja o arquivo LICENSE.
 
-```sh
-npm install
-```
+## Contato
+Sara — sara.ifc2024@gmail.com
+Roberta — robertaapbeta2212@gmail.com
+Email do projeto — climasegurosc@gmail.com
 
-### Compile and Hot-Reload for Development
+## Redes Sociais
+- ![Instagram](https://www.instagram.com/clima_seguro.ifc/)
+- ![Facebook](https://www.facebook.com/people/Clima-Seguro-IFC/61579871360977/)
 
-```sh
-npm run dev
-```
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```

@@ -7,11 +7,12 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "lint": "eslint . --fix",
+  "format": "prettier --write src/",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@coreui/icons": "^3.0.1",
@@ -39,6 +40,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "eslint": "^9.31.0",
     "eslint-plugin-vue": "~10.3.0",
+    "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "nodemon": "^3.1.10",
     "prettier": "3.6.2",
