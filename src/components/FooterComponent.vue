@@ -44,7 +44,7 @@
         &copy; Alguns direitos reservados. Clima Seguro - SC 2025
       </p>
       <p>
-        desenvolvido por:<br>Roberta Ribeiro<br>Sara Schulz<br>Yasmin kauany de oliveira
+        desenvolvido por:<br>Roberta Ribeiro<br>Sara Schulz
       </p>
     </div>
   </footer>
